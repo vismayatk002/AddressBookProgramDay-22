@@ -1,6 +1,6 @@
 package com.addressbookprogramday_22;
 
-public class Contact{
+public class ContactDetails{
 
 String firstName, lastName, email;
 
