@@ -2,16 +2,13 @@ package com.addressbookprogramday_22;
 
 import java.util.Scanner;
 import java.util.stream.Collectors;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class OperateContact{
 
     HashMap<String, AddressBook> contactMap = new HashMap<>();
-    HashMap<String, AddressBook> cityMap = new HashMap<>();
-    HashMap<String, AddressBook> statetMap = new HashMap<>();
-
+   
     public void editContact(){
 
         String address;
@@ -86,10 +83,10 @@ public class OperateContact{
          String city = sc.nextLine();
          
          List<String> person = contactMap.entrySet() 
-         .stream() 
-         .filter(HashMap -> HashMap.getValue().getCity().equals(city))
-         .map(HashMap -> HashMap.getValue().getFirstName())
-         .collect(Collectors.toList());
+		         .stream() 
+		         .filter(HashMap -> HashMap.getValue().getCity().equals(city))
+		         .map(HashMap -> HashMap.getValue().getFirstName())
+		         .collect(Collectors.toList());
          
          System.out.println(String.join(",", person));  
     }
