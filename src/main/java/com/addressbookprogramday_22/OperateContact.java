@@ -18,8 +18,25 @@ public class OperateContact{
         else{
             System.out.print("\ncouldn't find the contact..");
         }
-        sc.close();
     }
+    
+    public AddressBook deleteContact(AddressBook contact){
+
+        Scanner sc= new Scanner(System.in);
+        System.out.print("\nEnter the First name for delete : ");
+        String deleteName = sc.nextLine();
+        if(deleteName.equals(contact.getFirstName())){
+            AddressBook detail = new AddressBook();
+            System.out.print("\nYour contact deleted..");
+            return detail;
+        }
+        else{
+            System.out.print("\ncouldn't find the contact..");
+        }
+        sc.close();
+        return contact;        
+    }
+    
     public void showContact(AddressBook contact){
 
         System.out.print("\n-----------------");
